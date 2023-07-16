@@ -1,0 +1,23 @@
+.contact{
+    margin-top: 9rem;
+}
+.contact_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact_title h1{
+    font-size: 3rem;
+}
+.contact_input{
+    margin-top: 10rem;
+}
+.contact_input_description{
+   
+    width: 80rem;
+    height: 40rem;
+}
+.contact_input_description_title h2{
+    margin-left: 14rem;
+    font-size: 2.5rem;
+}
