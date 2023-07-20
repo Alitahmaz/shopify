@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/cart.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main/styles.css">
+    <title>Cart</title>
+</head>
+<body class="fix">
+    <div id="top-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light"
+                 style="padding: 27px 0; border-bottom: 1px solid #ededed; background-color: white !important;">
+                <div class="col-xl-2 col-lg-2 col-md-4 col-6">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../assets/logo.svg" class="d-inline-block align-top" alt="">
+                    </a>
+                </div>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo01"
+                        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
+    
+                    <div class="d-flex align-items-center justify-content-end navbar-nav mr-auto mt-2 mt-lg-0 col-xl-6 col-lg-7 d-none d-lg-flex"
+                         style="border: 2px solid #0989ff; height: 46px;">
+                        <div class="form-outline d-flex w-100">
+                            <input type="search" id="form1" placeholder="Search for Products..."
+                                   class="form-control border-none" style="border:none"/>
+                            <div class="dropdown">
+                                <button style="color: black; border-radius: 0;" class="btn dropdown-toggle border-none"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Select Category
+                                </button>
+                                <ul class="dropdown-menu" style="flex-direction: column; z-index: 9999">
+                                    <li><a class="dropdown-item" href="#">Electronics</a></li>
+                                    <li><a class="dropdown-item" href="#">Fashion</a></li>
+                                    <li><a class="dropdown-item" href="#">Beauty</a></li>
+                                    <li><a class="dropdown-item" href="#">Jewerelly</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary d-flex align-items-center justify-content-center"
+                                style="border-radius: 0 !important;height: 46px; width: 60px;">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                </path>
+                                <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div style="width:30%;" class="d-flex gap-5 col-xl-4 col-lg-3 col-md-8 col-6">
+                        <div class="d-flex align-items-center gap-3">
+                            <div style="margin-right:40px" class="d-flex gap-3">
+                                <img class="rounded-circle" src="../assets/Anonym-e1491994623630.jpg" width="45" height="45"
+                                     alt="">
+                                <div class="flex-column d-xl-flex d-none">
+                                    <small>Hello,</small>
+                                    <a href="#" style="color: black;text-decoration: none;">Sign in</a>
+                                </div>
+                            </div>
+                            <div>
+                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.8396 17.3319V3.71411" stroke="currentColor" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M19.1556 13L15.0778 17.0967L11 13" stroke="currentColor" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4.91115 1.00056V14.6183" stroke="currentColor" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M0.833496 5.09667L4.91127 1L8.98905 5.09667" stroke="currentColor"
+                                          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                            <div class="position-relative">
+                                <a href="/shopify-master/favorite/favorite.html" style="color: black">
+                                    <i class="fa fa-heart-o" style="font-size:24px">
+                                    </i>
+                                </a>
+                                <div class="position-absolute badge" id="favorite-badge">0</div>
+                            </div>
+                            <div class="position-relative">
+                                <a onclick="openSideMenu()" style="color: black">
+                                    <i class="fa fa-shopping-basket" style="font-size: 24px;" aria-hidden="true"></i>
+                                </a>
+                                <div class="position-absolute badge" id="cart-badge">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+<div class="container" style="padding-top: 50px;">
+    <h1>Shopping Cart</h1>
+    <nav aria-label="breadcrumb"
+         style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./../index.html">Home</a></li>
+            <li aria-current="page" class="breadcrumb-item active">Shopping Cart</li>
+        </ol>
+    </nav>
+
+    <div class="text-center pt-50 no-found" id="no-found">
+        <h3>No Cart Items Found</h3>
+        <a class="checkout-cart" href="#/">Continue Shipping</a>
+    </div>
+
+    <div class="fav-item" id="fav-item">
+        <div style="margin-top: 100px;">
+            <p> You are eligible for free shipping</p>
+        </div>
+        <div class="row">
+            <div class="col-xl-9 col-lg-8" style="">
+                <div style="margin-right: 40px; overflow-x: scroll">
+                    <table style="margin-right: 30px;">
+                        <thead>
+                        <tr>
+                            <th colspan="2" style="padding-left: 15px">Product</th>
+                            <th class="tp-cart-header-price">Price</th>
+                            <th class="tp-cart-header-quantity">Quantity</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody id="t-body">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="clear-wrapper">
+                    <button onclick="clearCart()" class="clear-cart">Clear Cart</button>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="checkout-wrapper">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h2>Subtotal</h2>
+                        <span>0</span>
+                    </div>
+                    <div class="mt-3">
+                        <h4>Shipping</h4>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <input style="width: 15px; height: 15px" id="flat" type="radio" value="1" name="shipping-type">
+                            <label for="flat">Flat rate: <a href="#/">$ 20.00</a></label>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <input style="width: 15px; height: 15px" id="local" type="radio" value="2" name="shipping-type">
+                            <label for="local">Local pickup: <a href="#/">$ 25.00</a></label>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-4">
+                            <input style="width: 15px; height: 15px" id="free" type="radio" value="3" name="shipping-type">
+                            <label for="free">Free shipping</label>
+                        </div>
+                    </div>
+                    <div class="border-0">
+                        <div class="total-section d-flex w-100 justify-content-between"
+                             style="border: none; padding: 20px 0">
+                            <span>Total</span>
+                            <span>0</span>
+                        </div>
+                        <div>
+                            <button class="checkout-btn">Proceed to Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main/styles.css">
+    <title>Document</title>
+</head>
+<body>
+<footer>
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-3 col-md-4 col-sm-6">
+                    <div class="footer-left">
+                        <img src="../assets/logo.svg" alt="" class="mb-4">
+                        <h3>We are a team of designers and developers that create high quality WordPress</h3>
+                        <div class="mt-4">
+                            <a href="https://www.facebook.com/" target="_blank"><i style="color: black"
+                                                                                   class="fa fa-facebook-f"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i style="color: black"
+                                                                                   class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i style="color: black"
+                                                                                   class="fa fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i style="color: black"
+                                                                                   class="fa fa-vimeo"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 footer-list">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li>Track Orders</li>
+                        <li>Shipping</li>
+                        <li>Wishlist</li>
+                        <li>My Account</li>
+                        <li>Order History</li>
+                        <li>Returns</li>
+                    </ul>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6  footer-list" style="margin-right: 70px;">
+                    <h4>Information</h4>
+                    <ul>
+                        <li>Our Story</li>
+                        <li>Careers</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms & Conditions</li>
+                        <li>Latest News</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <div class="contact-section">
+                        <h4>Talk To Us</h4>
+                        <div class="mb-3">
+                            <span>Got Questions? Call us</span>
+                            <h4>
+                                <a href="tel:+670 413 90 762">+670 413 90 762</a>
+                            </h4>
+                        </div>
+                        <div class="mb-2">
+                            <i class="fa fa-envelope-o" style="color: #666666"></i>
+                            <a href="mail:shofy@support.com">shofy@support.com</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-map-marker" style="color: #666666"></i>
+                            <a href="#"> 79 Sleepy Hollow St.
+                                Jamaica, New York 1432</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="finish container">
+            <div class="container footer-border">
+                <div class="finish_item">
+                    <div class="finish_item_template">
+                        <p>© 2023 All Rights Reserved | js Template by <span>ThemePure.</span></p>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/payment-option.webp" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+</footer>
+
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+<script src="./js/cart.js"></script>
+<script src="./../js/header.js"></script>
+</body>
+</html>

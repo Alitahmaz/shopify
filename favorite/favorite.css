@@ -1,0 +1,123 @@
+.no-found {
+    padding-bottom: 120px;
+    padding-top: 100px;
+}
+
+.checkout-cart {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background-color: black;
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.checkout-cart:hover {
+    background-color: #0989ff;
+}
+
+thead {
+    background-color: #f1f3f4;
+}
+
+.fav-item {
+    padding-bottom: 100px;
+}
+
+table {
+    width: 100%;
+    margin: 0;
+}
+
+th {
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+    border: 0 !important;
+    padding-top: 9px !important;
+    padding-bottom: 9px !important;
+    padding: 20px 0;
+    box-shadow: none;
+    vertical-align: middle;
+}
+
+.image-wrapper {
+    background-color: #f2f3f5;
+    display: inline-block;
+}
+
+#product-img {
+    width: 78px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.add-to-cart {
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #0989ff;
+    padding: 9px 26px 7px;
+    border: 0;
+    color: white;
+}
+
+tr > td {
+    padding: 20px 0;
+}
+
+tbody > tr:last-child {
+    border-bottom: 1px solid #a0a2a4 !important;
+}
+
+.remove-btn {
+    font-weight: 400;
+    font-size: 14px;
+    color: #818487;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.quantity-input {
+    outline: none;
+    background-color: #fff;
+    width: 100%;
+    line-height: 56px;
+    font-size: 14px;
+    height: 34px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #dadce0;
+    padding: 0 30px;
+    border-radius: 20px;
+}
+
+.count-input {
+    position: relative;
+    border-radius: 20px;
+    width: 100px;
+}
+
+.count-input > span:last-child {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+}
+
+.count-input > span:first-child {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+}

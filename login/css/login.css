@@ -1,0 +1,145 @@
+.login-wrapper {
+    box-shadow: 0 30px 70px rgba(1, 15, 28, .1);
+    padding: 50px 60px 70px;
+    background-color: white;
+}
+
+.sign-google {
+    border: 1px solid #dadce0;
+    color: #3c4043;
+    cursor: pointer;
+    width: 215px;
+    max-width: 100%;
+    border-radius: 4px;
+    margin: 50px auto 50px;
+}
+
+.email-sign {
+    font-size: 15px;
+    color: #55585b;
+    margin-bottom: 0;
+    padding: 0 20px;
+    display: inline-block;
+    background-color: white;
+}
+
+.email-sign:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 9px;
+    width: 100%;
+    height: 1px;
+    background-color: #e0e2e3;
+    z-index: -2;
+}
+
+.email-input {
+    height: 56px;
+    background: #fff;
+    border: 1px solid #e0e2e3;
+    font-size: 14px;
+    color: black;
+    width: 100%;
+    line-height: 56px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.input-section {
+    position: relative;
+    margin: 40px 0;
+}
+
+.input-section > label {
+    font-size: 14px;
+    color: black;
+    position: absolute;
+    top: -7px;
+    left: 20px;
+    padding: 0 5px;
+    background-color: white;
+    line-height: 1;
+    z-index: 1;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.login-btn {
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    padding: 14px 30px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-shape {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-shape > img {
+    position: absolute;
+    z-index: -1;
+}
+
+.login-shape1 {
+    top: 7%;
+    left: 18%;
+}
+
+.login-shape2 {
+    bottom: 38%;
+    left: 26%;
+}
+
+.login-shape3 {
+    top: 7%;
+    right: 22%;
+}
+
+.login-shape4 {
+    bottom: 27%;
+    right: 20%;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .login-shape4 {
+        right: -4%;
+    }
+
+    .login-shape3 {
+        right: 10%;
+    }
+
+    .login-shape2 {
+        left: 8%;
+    }
+
+    .login-shape1 {
+        left: 4%;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .login-shape4 {
+        right: 3%;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1600px) and (max-width: 1700px) {
+    .login-shape4 {
+        right: 10%;
+    }
+}
